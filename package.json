@@ -1,0 +1,19 @@
+{
+  "name": "orisha_backend",
+  "version": "4.19.2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brice Nogou",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "config": "^3.3.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.0",
+    "nodemailer": "^6.9.14",
+    "serverless-http": "^3.2.0"
+  }
+}
