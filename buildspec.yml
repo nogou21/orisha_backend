@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install --only=prod
+  build:
+    commands:
+      - echo Build started on `date`
+      - 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo "Packaging the Lambda function..."
+      - zip -r orisha_backend.zip *
+      - echo "Deploying Lambda function..."
+      - aws lambda update-function-code --function-name orisha_backend --zip-file fileb://orisha_backend.zip
